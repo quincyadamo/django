@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Username Validation</title>
+    {% load static %}
+    <link rel="stylesheet" href={% static 'myApp/css/stylesheet.css' %}>
+  </head>
+
+  <body id="wrapper">
+    {% for message in messages %}
+      <div class="success">{{ message }}</div>
+    {% endfor %}
+    <h4>Usernames entered:</h4>
+    <table>
+
+      <tbody>
+      {% for username in usernamelist %}
+        <tr>
+          <td>{{ username.name }}</td>
+          <td>{{ username.created_at|date:"m/d/Y" }}</td>
+          <td>{{ username.created_at|date:"h:iA"|lower }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

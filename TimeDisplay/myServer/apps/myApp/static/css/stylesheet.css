@@ -1,0 +1,22 @@
+.header {
+  height: 100px;
+  width: 400px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 28px;
+  padding-top: 50px;
+  position: relative;
+  left: 350px;
+}
+
+.content {
+  height: 200px;
+  width: 600px;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 100px;
+  position: relative;
+  left: 250px;
+  margin-top: 20px;
+}

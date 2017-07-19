@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Full Stack Books</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'myApp/css/stylesheet.css' %}"media="screen" title="no title"  charset="utf-8">
+        <meta charset='utf-8'/>
+    </head>
+    <body>
+        <div id='wrapper'>
+            <h1>The Full Stack Book List</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                </tr>
+                {% for book in books %}
+                <tr>
+                    <td>{{ book.id }}</td>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.category }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <h2>Add Your Favorite Book(s)!</h2>
+            <form action="/addbook" id="addbook" method="POST">
+                {% csrf_token %}
+                <label for="">Title: </label>
+                <input type="text" name="title" placeholder="Insert Book Title">
+                <label for="">Category: </label>
+                <input type="text" name="category" placeholder="Insert Book Category">
+                <label for="">Author: </label>
+                <input type="text" name="author" placeholder="Insert Book Author">
+                <input class="button" type="submit" value="Submit!">
+            </form>
+        </div>
+    </body>
+</html>

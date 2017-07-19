@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login Registration Assignment</title>
+        {% load staticfiles %}
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'myApp/css/stylesheet.css' %}"media="screen" title="no title"  charset="utf-8">
+
+    </head>
+
+    <body>
+      <div class="wrapper row">
+
+
+        {% if messages %}
+
+            {% for message in messages %}
+                <div class='alert alert-{{message.tags}}'>{{message}}</div>
+            {% endfor %}
+
+        {% endif %}
+
+        <div class="col-md-6">
+
+            <form class="" action="/register" method="POST">
+                {% csrf_token %}
+
+                <h2>Registration</h2>
+
+                <div class="form-group">
+                 <label for="first_name">First Name</label>
+                   <input name="first_name" type="text" class="form-control" id="first_name" placeholder="">
+                </div>
+
+
+                <div class="form-group">
+                 <label for="last_name">Last Name</label>
+                   <input name="last_name" type="text" class="form-control" id="last_nameLast" placeholder="">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email Address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input name="pw" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="exampleInputPassword2">Confirm Password</label>
+                  <input name="pw_confirmation" type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+                </div>
+                <br>
+                <button type="submit" name="register" class="btn btn-default">Register</button>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+
+            <form class="" action="/login" method="POST">
+              <h2>Login</h2>
+                {% csrf_token %}
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email Address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input name="pw" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+                <button type="submit" name="login" class="btn btn-default">Login</button>
+            </form>
+        </div>
+      </div>
+    </body>
+</html>

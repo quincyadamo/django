@@ -1,0 +1,47 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      margin: 0 auto;
+      width: 800px;
+    }
+
+    input {
+      display: inline-block;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .messages {
+      border: 1px solid black;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .alert-error {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .row1 {
+      background: gray;
+    }
+
+    .row2 {
+      background: #FFF;
+    }
+
+    .button {
+      background-color: blue;
+    }

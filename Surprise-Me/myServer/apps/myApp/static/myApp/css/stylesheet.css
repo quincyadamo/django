@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  margin: 50px;
+}
+
+input, button {
+  border: 1px solid black;
+}
+
+li {
+  list-style-type: none;
+}

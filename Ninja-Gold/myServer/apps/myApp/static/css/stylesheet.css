@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  text-align: center;
+}
+
+.box {
+  border: 2px solid black;
+  width: 250px;
+  height: 150px;
+  margin: 53px;
+  float: left;
+}
+
+.box form {
+  padding-top: 35px;
+}
+
+.box button {
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.tally {
+  border: 2px solid gray;
+  height: 20px;
+  width: 105px;
+  text-align: center;
+  padding: 10px 0px;
+  margin: 10px 0 0 10px;
+}
+
+#activity-log {
+  border: 2px solid gray;
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  padding: 25px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  color: green;
+}
+
+.red {
+  color: red !important;
+}
